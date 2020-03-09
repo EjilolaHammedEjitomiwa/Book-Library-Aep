@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library Aep</title>
+
+    <link rel="stylesheet" href="./styles.css">
+   
+
+</head>
+<body>
+    <div id="loader" class="loader_anim"></div>
+    <div class="header">
+        <p>Book Library Aep</p>
+        <div id="nav-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+    </div>
+
+    <div id="header-option" class="close_nav">
+        <p id="addBoook"><a href="#add-book-section">Add book</a></p>
+        <p id="viewBook"><a href="#list-of-books">View registered book</a></p>
+    </div>
+
+<!-- ADDING BOOKS -->
+    <div id="add-book-section">
+        <input id="input_bookTitle" type="text" placeholder="Book title">
+        <input id="input_bookIsbn" type="text" placeholder="Book ISBN">
+        <input id="input_date" type="text" placeholder="date">
+        <button id="submit_book">Submit</button>
+
+    </div>
+
+<!-- AVAILABLE BOOKS -->
+
+    <div id="list-of-books">
+        <p>List of available books</p>
+        
+       
+
+    </div>
+
+    <script src="https://unpkg.com/@aeternity/aepp-sdk@6.1.2/dist/aepp-sdk.browser-script.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
