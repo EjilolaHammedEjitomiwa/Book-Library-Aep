@@ -55,7 +55,7 @@ contract BookLibraryContract =
 `;
 
 window.addEventListener('load', async function(){
-    client = await Ae.Aepp()
+    client=await Ae.Aepp();
     contractInstance=await client.getContractInstance(contractSource,{contractAddress});
     let allBooks=  (await contractInstance.methods.getUserListBooks()).decodedResult;
     console.log(allBooks,"all books");
@@ -75,8 +75,8 @@ async function handleSubmitClick(){
 
     if(title.trim() !="" && isbn.trim() !="" && date.trim() !="" ){
         document.getElementById("loader").style.display="block";
-     let result   =await contractInstance.methods.registerBook(title,isbn,date);
-        console.log(title,result);
+     await contractInstance.methods.registerBook(title,isbn,date);
+
         addBookToDom(title,isbn);
         document.getElementById("loader").style.display="none";
     }
@@ -84,6 +84,7 @@ async function handleSubmitClick(){
 }
 
 document.getElementById("submit_book").addEventListener("click",handleSubmitClick);
+
 function addBookToDom(title,isbn){
     let allBooks = document.getElementById("list-of-books");
     //to create a new book div
