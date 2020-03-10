@@ -21,7 +21,7 @@ document.getElementById("viewBook").addEventListener("click",toggleNavBar);
 
 let contractInstance = null
 let client = null
-let contractAddress ="ct_2q61BRQoiK2cXYAxeUSYSE7JD7Y1iVPiLtVukrWcjVjVVzyrWg";
+let contractAddress ="ct_jWPUccMWQiLMkev8GNsWZFuduoiVv6TmbxMqjYcMiUnhuZZZW";
 let contractSource =`
 
 contract BookLibraryContract =
